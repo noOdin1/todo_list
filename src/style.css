@@ -8,3 +8,86 @@
   color: black;
   background: white;
 }
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+
+/**
+ * NOTE: The following has been calibrated to have a centered 
+*        content/container over all the devices.
+ **/
+:root {
+  --max-width: 1440px;
+  --variable-width: 95%;
+  --height-value: 95vh;
+  --height-margin-centered: calc(calc(100vh - var(--height-value)) / 2);
+  --internal-container-spacing: 0.2em;
+
+  --container-border-radius: 0.5em;
+  --css_visual_border_guide: 1px solid MediumVioletRed;
+  /* --css_visual_border_guide: 1px solid transparent; */
+}
+
+.main.container {
+  width: var(--variable-width);
+  max-width: var(--max-width);
+  height: var(--height-value);
+  margin: var(--height-margin-centered) auto;
+  padding: var(--internal-container-spacing);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  grid-template-areas:
+    "header header header header header header header header"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary"
+    "left left content content content content summary summary";
+  border: var(--css_visual_border_guide);
+}
+
+.top.container {
+  grid-area: header;
+  padding: 1.5em;
+  border-top-left-radius: var(--container-border-radius);
+  border-top-right-radius: var(--container-border-radius);
+  margin-bottom: var(--internal-container-spacing);
+  border: var(--css_visual_border_guide);
+}
+
+.left.container {
+  grid-area: left;
+  border-bottom-left-radius: var(--container-border-radius);
+  border: var(--css_visual_border_guide);
+}
+
+.content.container {
+  grid-area: content;
+  margin: 0 var(--internal-container-spacing);
+  border: var(--css_visual_border_guide);
+}
+
+.summary.container {
+  grid-area: summary;
+  border-bottom-right-radius: var(--container-border-radius);
+  border: var(--css_visual_border_guide);
+}
+
+#appName {
+  text-align: center;
+}
