@@ -46,17 +46,6 @@ h3 {
   grid-template-rows: repeat(12, 1fr);
   grid-template-areas:
     "header header header header header header header header"
-    "left left content content content content summary summary"
-    "left left content content content content summary summary"
-    "left left content content content content summary summary"
-    "left left content content content content summary summary"
-    "left left content content content content summary summary"
-    "left left content content content content summary summary"
-    "left left content content content content summary summary"
-    "left left content content content content summary summary"
-    "left left content content content content summary summary"
-    "left left content content content content summary summary"
-    "left left content content content content summary summary"
     "left left content content content content summary summary";
   border: var(--css_visual_border_guide);
 }
