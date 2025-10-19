@@ -21,6 +21,46 @@ import "./style.css";
 // }
 
 const todoApp = (function () {
+  /* Class to hold task information */
+  class TaskItem {
+    constructor(id, name, desc, priority, endDate) {
+      this._taskId = id;
+      this._taskName = name;
+      this._taskDesc = desc;
+      this._taskPriority = priority;
+      this._taskEndDate = endDate;
+    }
+    get taskId() {
+      return this._taskId;
+    }
+    get taskName() {
+      return this._taskName;
+    }
+    get taskDesc() {
+      return this._taskDesc;
+    }
+    get taskPriority() {
+      return this._priority;
+    }
+    get taskEndTime() {
+      return this._taskEndDate;
+    }
+    set taskId(id) {
+      this._taskId = id;
+    }
+    set taskName(name) {
+      this._taskName = name;
+    }
+    set taskDesc(desc) {
+      this._taskDesc = desc;
+    }
+    set taskPriority(priority) {
+      this._priority = priority;
+    }
+    set taskEndTime(endDate) {
+      this._taskEndDate = endDate;
+    }
+  }
   const newProject = () => {
     // console.log("[newProject] Create new Project");
   };
