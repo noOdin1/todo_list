@@ -87,4 +87,5 @@ h3 {
 
 #appName {
   text-align: center;
+  /* font-size: clamp(1.8rem, calc(7vw + 1rem), 3rem); */
 }
