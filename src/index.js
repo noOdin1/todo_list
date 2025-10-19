@@ -111,6 +111,14 @@ const todoApp = (function () {
   const displayTask = () => {
     console.log("[displayTask] Displaying  all task");
   };
+  const displayProjects = () => {
+    projectList.forEach((proj) => {
+      console.log(`Project details: 
+        Project id: ${proj.projectId}
+        Project name: ${proj.projectName}
+      `);
+    });
+  };
   const updateTask = () => {
     console.log("[updateTask] Updating a task");
   };
