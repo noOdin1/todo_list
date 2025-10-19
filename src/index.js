@@ -61,6 +61,32 @@ const todoApp = (function () {
       this._taskEndDate = endDate;
     }
   }
+  class Project {
+    constructor(id, name, taskGrp) {
+      this._projectId = id;
+      this._projectName = name;
+      this._taskGroup = taskGrp;
+    }
+    get projectId() {
+      return this._projectId;
+    }
+    get projectName() {
+      return this._projectName;
+    }
+    get projectTaskGrp() {
+      return this._taskGroup;
+    }
+    set projectId(id) {
+      this._projectId = id;
+    }
+    set projectName(name) {
+      this._projectName = name;
+    }
+    set projectTaskGrp(taskGrp) {
+      this._taskGroup.push(taskGrp);
+    }
+  }
+
   const newProject = () => {
     // console.log("[newProject] Create new Project");
   };
