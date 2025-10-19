@@ -21,6 +21,26 @@ import "./style.css";
 // }
 
 const todoApp = (function () {
+  const newProject = () => {
+    // console.log("[newProject] Create new Project");
+  };
+  const newTask = () => {
+    console.log("[newTask] Creating new task");
+  };
+  const displayTask = () => {
+    console.log("[displayTask] Displaying  all task");
+  };
+  const updateTask = () => {
+    console.log("[updateTask] Updating a task");
+  };
+  const deleteTask = () => {
+    console.log("[deleteTask] Deleting a task");
+  };
+
+  const choiceErrorMsg = () => {
+    console.log("[Error] Invalid choice");
+  };
+
   const menuOpt = {
     1: newProject,
     2: newTask,
