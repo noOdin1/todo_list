@@ -63,18 +63,24 @@ h3 {
 
 .left.container {
   grid-area: left;
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 11;
   border-bottom-left-radius: var(--container-border-radius);
   border: var(--css_visual_border_guide);
 }
 
 .content.container {
   grid-area: content;
+  grid-column: 3 / span 4;
+  grid-row: 2 / span 11;
   margin: 0 var(--internal-container-spacing);
   border: var(--css_visual_border_guide);
 }
 
 .summary.container {
   grid-area: summary;
+  grid-column: 7 / span 2;
+  grid-row: 2 / span 11;
   border-bottom-right-radius: var(--container-border-radius);
   border: var(--css_visual_border_guide);
 }
