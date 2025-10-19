@@ -20,3 +20,5 @@ import "./style.css";
 //   console.log("User data not found in local storage");
 // }
 
+const todoApp = (function () {
+})();
