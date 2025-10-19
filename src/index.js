@@ -21,4 +21,16 @@ import "./style.css";
 // }
 
 const todoApp = (function () {
+  const menuOpt = {
+    1: newProject,
+    2: newTask,
+    3: displayTask,
+    4: displayProjects,
+    5: updateTask,
+    6: deleteTask,
+    7: () => {
+      console.log("Exiting...");
+    },
+  };
+
 })();
