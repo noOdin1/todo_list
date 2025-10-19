@@ -77,4 +77,5 @@ const todoApp = (function () {
     }
   }
 
+  startApp();
 })();
