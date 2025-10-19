@@ -23,6 +23,10 @@ import { v4 as uuidv4 } from "uuid";
 // }
 
 const todoApp = (function () {
+  let projectList = []; /* Arrays of projects, this will be 
+                           the array used to save to 
+                           localStorage. */
+
   /* Class to hold task information */
   class TaskItem {
     constructor(id, name, desc, priority, endDate) {
