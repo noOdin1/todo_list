@@ -33,4 +33,17 @@ const todoApp = (function () {
     },
   };
 
+  function getUserInput() {
+    let userChoice = prompt(`
+      1. Create new project
+      2. Create new task
+      3. Display all task
+      4. Show all projects
+      5. Update a task
+      6. Delete a task
+      7. Exit
+      Enter your choice: 
+    `);
+    return userChoice;
+  }
 })();
