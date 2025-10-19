@@ -46,4 +46,15 @@ const todoApp = (function () {
     `);
     return userChoice;
   }
+
+  function startApp() {
+    console.log("Start of application");
+    let choice = 1;
+    while (choice != 7) {
+      choice = getUserInput();
+      console.log("[] User choice: " + choice);
+      choice >= 1 && choice <= 7 ? menuOpt[choice]() : choiceErrorMsg();
+    }
+  }
+
 })();
