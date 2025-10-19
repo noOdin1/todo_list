@@ -10,12 +10,13 @@ import "./style.css";
 //
 // localStorage.setItem("user", JSON.stringify(userObj));
 
-const storedUserData = localStorage.getItem("user");
+// const storedUserData = localStorage.getItem("user");
+//
+// if (storedUserData) {
+//   const userData = JSON.parse(storedUserData);
+//   console.log(userData);
+//   // You can use userData here...
+// } else {
+//   console.log("User data not found in local storage");
+// }
 
-if (storedUserData) {
-  const userData = JSON.parse(storedUserData);
-  console.log(userData);
-  // You can use userData here...
-} else {
-  console.log("User data not found in local storage");
-}
