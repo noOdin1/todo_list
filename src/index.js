@@ -91,6 +91,15 @@ const todoApp = (function () {
 
   const newProject = () => {
     // console.log("[newProject] Create new Project");
+    let projectId = uuidv4();
+    let projectName = prompt(`Project Name: `);
+
+    let project1 = new Project(projectId, projectName);
+    console.log(`Project details: 
+      Project id: ${project1.projectId}
+      Project name: ${project1.projectName}
+    `);
+    projectList.push(project1);
   };
   const newTask = () => {
     console.log("[newTask] Creating new task");
