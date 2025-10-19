@@ -26,8 +26,8 @@ h3 {
 :root {
   --max-width: 1440px;
   --variable-width: 95%;
-  --height-value: 95vh;
-  --height-margin-centered: calc(calc(100vh - var(--height-value)) / 2);
+  --height-value: 95dvh;
+  --height-margin-centered: calc(calc(100dvh - var(--height-value)) / 2);
   --internal-container-spacing: 0.2em;
 
   --container-border-radius: 0.5em;
