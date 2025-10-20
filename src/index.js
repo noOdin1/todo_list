@@ -42,13 +42,17 @@ const todoApp = (function () {
   class Task {
     constructor(id, projId, name, desc, priority, dueDate) {
       this._taskId = id;
+      this._projectId = projId;
       this._taskName = name;
       this._taskDesc = desc;
       this._taskPriority = priority;
-      this._taskEndDate = endDate;
+      this._taskDueDate = dueDate;
     }
     get taskId() {
       return this._taskId;
+    }
+    get projectId() {
+      return this._projectId;
     }
     get taskName() {
       return this._taskName;
@@ -57,13 +61,16 @@ const todoApp = (function () {
       return this._taskDesc;
     }
     get taskPriority() {
-      return this._priority;
+      return this._taskPriority;
     }
-    get taskEndTime() {
-      return this._taskEndDate;
+    get taskDueDate() {
+      return this._taskDueDate;
     }
     set taskId(id) {
       this._taskId = id;
+    }
+    set projectId(projId) {
+      this._projectId = projId;
     }
     set taskName(name) {
       this._taskName = name;
@@ -72,10 +79,10 @@ const todoApp = (function () {
       this._taskDesc = desc;
     }
     set taskPriority(priority) {
-      this._priority = priority;
+      this._taskPriority = priority;
     }
-    set taskEndTime(endDate) {
-      this._taskEndDate = endDate;
+    set taskDueDate(endDate) {
+      this._taskDueDate = dueDate;
     }
   }
   class Project {
