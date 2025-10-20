@@ -32,6 +32,7 @@ import { isFuture } from "date-fns";
 // }
 
 const todoApp = (function () {
+  let runConsoleVersion = true;
   let projectList = []; /* Arrays of projects, this will be 
                            the array used to save to 
                            localStorage. */
