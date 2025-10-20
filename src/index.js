@@ -2,6 +2,14 @@
 import "./style.css";
 
 import { v4 as uuidv4 } from "uuid";
+import {
+  consoleDisplayProjects,
+  consoleGetInput,
+  consolePromptInput,
+  consoleGetDate,
+  consoleAssignProject,
+  consoleDisplayTasks,
+} from "./console.js";
 
 // console.log("Compilation works, hello world!");
 
