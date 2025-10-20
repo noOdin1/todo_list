@@ -86,10 +86,9 @@ const todoApp = (function () {
     }
   }
   class Project {
-    constructor(id, name, taskGrp) {
+    constructor(id, name) {
       this._projectId = id;
       this._projectName = name;
-      this._taskGroup = taskGrp;
     }
     get projectId() {
       return this._projectId;
@@ -97,17 +96,11 @@ const todoApp = (function () {
     get projectName() {
       return this._projectName;
     }
-    get projectTaskGrp() {
-      return this._taskGroup;
-    }
     set projectId(id) {
       this._projectId = id;
     }
     set projectName(name) {
       this._projectName = name;
-    }
-    set projectTaskGrp(taskGrp) {
-      this._taskGroup.push(taskGrp);
     }
   }
 
