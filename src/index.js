@@ -39,8 +39,8 @@ const todoApp = (function () {
   let taskList = []; /* Arrays of task */
 
   /* Class to hold task information */
-  class TaskItem {
-    constructor(id, name, desc, priority, endDate) {
+  class Task {
+    constructor(id, projId, name, desc, priority, dueDate) {
       this._taskId = id;
       this._taskName = name;
       this._taskDesc = desc;
