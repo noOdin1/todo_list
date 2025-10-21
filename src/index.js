@@ -177,5 +177,7 @@ const todoApp = (function () {
     }
   }
 
-  startApp();
+  runConsoleVersion
+    ? startAppInConsole()
+    : console.log("Starting Web Application");
 })();
