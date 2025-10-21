@@ -104,6 +104,7 @@ const todoApp = (function () {
     }
   }
 
+  const priorityLvl = ["Urgent", "Important", "Normal"];
   const newProject = () => {
     // console.log("[newProject] Create new Project");
     let projectId = uuidv4();
