@@ -2,6 +2,16 @@ const consolePromptInput = (promptStr) => {
   return prompt(promptStr);
 };
 
+const consoleGetDate = (promptStr) => {
+  let tmpDateStr = "2000-01-01";
+  while (!isFuture(tmpDateStr)) {
+    tmpDateStr = consolePromptInput(promptStr);
+    if (!isFuture(tmpDateStr)) {
+      console.log("Error, please enter a date in the future");
+    }
+  }
+  return tmpDateStr;
+};
 
 
 const consoleDisplayProjects = (projectList) => {
