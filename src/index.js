@@ -116,6 +116,24 @@ const todoApp = (function () {
   };
   const newTask = () => {
     console.log("[newTask] Creating new task");
+    let taskId = uuidv4();
+    let newTask = "";
+    if (runConsoleVersion) {
+      let taskName = consolePromptInput("Task name: ");
+      let taskDesc = consolePromptInput("Task description/notes: ");
+      let taskPriority = priorityLvl[consoleGetInput(priorityLvl)];
+      let taskDueDate = consoleGetDate("Task due date (YYYY-MM-DD): ");
+      let taskProjectId = consoleAssignProject(projectList);
+      newTask = new Task(
+        taskId,
+        taskProjectId,
+        taskName,
+        taskDesc,
+        taskPriority,
+        taskDueDate,
+      );
+    }
+    taskList.push(newTask);
   };
   const displayTask = () => {
     console.log("[displayTask] Displaying  all task");
