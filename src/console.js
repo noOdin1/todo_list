@@ -26,6 +26,24 @@ const consoleGetDate = (promptStr) => {
   return tmpDateStr;
 };
 
+const consoleAssignProject = (projectList) => {
+  if (projectList.length === 0) {
+    return null;
+  }
+  let tmpArray = projectList.map((elem) => {
+    return elem.projectName;
+  });
+  let choice = -1;
+  tmpArray.push("Not assigned for the moment");
+  while (!(choice > 0 && choice < tmpArray.length)) {
+    choice = consoleGetInput(tmpArray, "Assign Task to Project");
+  }
+  if (choice == tmpArray.length - 1) {
+    return null;
+  }
+  // let choice = consoleGetInput(tmpArray, "Assign Task to Project");
+  return projectList[choice].projectId;
+};
 
 const consoleDisplayProjects = (projectList) => {
   projectList.forEach((proj) => {
