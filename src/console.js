@@ -26,3 +26,31 @@ const consoleDisplayTasks = (taskList) => {
   });
 };
 
+const consoleGetInput = (menuObj, menuTitle) => {
+  let menuLen =
+    menuObj.constructor.name === "Array"
+      ? menuObj.length
+      : Object.keys(menuObj).length;
+  let menuStr = "";
+  if (!(menuTitle === null || menuTitle === undefined || menuTitle === "")) {
+    menuStr += menuTitle + "\n";
+  }
+  // let menuStr += (menuTitle !== undefined) ? menuTitle + "\n" : "";
+  menuStr += "Please enter your choice (0-" + `${menuLen - 1})` + "\n";
+  menuObj.constructor.name === "Array"
+    ? menuObj.filter((elem, index) => {
+        menuStr += `${index}. ` + elem + "\n";
+      })
+    : Object.keys(menuObj).forEach((key, index) => {
+        menuStr += `
+        ${index}. ${key}`;
+      });
+  let choice = -1;
+  while (choice > menuLen - 1 || choice < 0) {
+    choice = prompt(menuStr);
+    if (choice < 0 || choice > menuLen - 1) {
+      console.log("[consoleGetInput] Invalid choice");
+    }
+  }
+  return choice;
+};
