@@ -167,13 +167,16 @@ const todoApp = (function () {
     return userChoice;
   }
 
-  function startApp() {
+  function startAppInConsole() {
     console.log("Start of application");
-    let choice = 1;
-    while (choice != 7) {
-      choice = getUserInput();
-      console.log("[] User choice: " + choice);
-      choice >= 1 && choice <= 7 ? menuOpt[choice]() : choiceErrorMsg();
+    let choice = 0;
+    while (choice != Object.keys(menuOpt).length - 1) {
+      choice = consoleGetInput(menuOpt);
+      Object.keys(menuOpt).forEach((key, index) => {
+        if (index == choice) {
+          menuOpt[key]();
+        }
+      });
     }
   }
 
