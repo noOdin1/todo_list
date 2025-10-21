@@ -142,12 +142,10 @@ const todoApp = (function () {
     }
   };
   const displayProjects = () => {
-    projectList.forEach((proj) => {
-      console.log(`Project details: 
-        Project id: ${proj.projectId}
-        Project name: ${proj.projectName}
-      `);
-    });
+    console.log("[displayProjects] All projects");
+    if (runConsoleVersion) {
+      consoleDisplayProjects(projectList);
+    }
   };
   const updateTask = () => {
     console.log("[updateTask] Updating a task");
