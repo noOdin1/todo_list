@@ -1,3 +1,14 @@
+/* console.js - todo list project */
+
+export {
+  consoleDisplayProjects,
+  consoleGetInput,
+  consolePromptInput,
+  consoleGetDate,
+  consoleAssignProject,
+  consoleDisplayTasks,
+};
+
 const consolePromptInput = (promptStr) => {
   return prompt(promptStr);
 };
