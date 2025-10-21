@@ -142,14 +142,15 @@ const todoApp = (function () {
   };
 
   const menuOpt = {
-    1: newProject,
-    2: newTask,
-    3: displayTask,
-    4: displayProjects,
-    5: updateTask,
-    6: deleteTask,
-    7: () => {
-      console.log("Exiting...");
+    "Create new project": newProject,
+    "Create new task": newTask,
+    "Display all task": displayTask,
+    "Show all projects": displayProjects,
+    "Update a task": updateTask,
+    "Delete a task": deleteTask,
+    "Delete a project": deleteProject,
+    "Exit..": () => {
+      console.log("Exiting console version...");
     },
   };
 
