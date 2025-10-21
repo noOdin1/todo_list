@@ -136,7 +136,10 @@ const todoApp = (function () {
     taskList.push(newTask);
   };
   const displayTask = () => {
-    console.log("[displayTask] Displaying  all task");
+    console.log("[displayTask] All task");
+    if (runConsoleVersion) {
+      consoleDisplayTasks(taskList);
+    }
   };
   const displayProjects = () => {
     projectList.forEach((proj) => {
