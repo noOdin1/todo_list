@@ -35,7 +35,7 @@ const consoleAssignProject = (projectList) => {
   });
   let choice = -1;
   tmpArray.push("Not assigned for the moment");
-  while (!(choice > 0 && choice < tmpArray.length)) {
+  while (!(choice > -1 && choice < tmpArray.length)) {
     choice = consoleGetInput(tmpArray, "Assign Task to Project");
   }
   if (choice == tmpArray.length - 1) {
