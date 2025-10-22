@@ -168,6 +168,32 @@ const todoApp = (function () {
     }
 
     let projectId = projectList[choice].projectId;
+    let yesno = ["yes", "no"];
+    let removeTask = consoleGetInput(
+      yesno,
+      'Remove task related to "' + projectList[choice].projectName + '"',
+    );
+    /* Remove task associated with the projectId. */
+    if (removeTask == 0) {
+      let tmpList = [];
+      for (let i = 0; i < taskList.length; i++) {
+        if (taskList[i].projectId != projectId) {
+          tmpList.push(taskList[i]);
+        }
+      }
+      taskList = [];
+      taskList = tmpList.map(function (e) {
+        return e;
+      });
+    }
+    /* Preserving the tasks, remove only projectId */
+    if (removeTask == 1) {
+      taskList.filter((task) => {
+        if (task.projectId == projectId) {
+          task.projectId = null;
+        }
+      });
+    }
     projectList.splice(choice, 1);
   };
 
