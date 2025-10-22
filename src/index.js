@@ -40,6 +40,8 @@ const todoApp = (function () {
                            the array used to save to 
                            localStorage. */
   let taskList = []; /* Arrays of task */
+  let projectData = "project";
+  let taskData = "task";
 
   /* Class to hold task information */
   class Task {
@@ -124,6 +126,8 @@ const todoApp = (function () {
     }
     let newProject = new Project(projectId, projectName);
     projectList.push(newProject);
+    /* Save project info to localStorage */
+    localStorage.setItem(projectData, JSON.stringify(projectList));
   };
   const newTask = () => {
     console.log("[newTask] Creating new task");
@@ -145,6 +149,7 @@ const todoApp = (function () {
       );
     }
     taskList.push(newTask);
+    localStorage.setItem(taskData, JSON.stringify(taskList));
   };
   const displayTask = () => {
     console.log("[displayTask] All task");
@@ -201,6 +206,7 @@ const todoApp = (function () {
       let tempStr = Object.keys(taskItemsForUpdate)[userChoice];
       taskItemsForUpdate[tempStr](taskList[choice]);
     }
+    localStorage.setItem(taskData, JSON.stringify(taskList));
   };
   const deleteTask = () => {
     console.log("[deleteTask] Deleting a task");
@@ -209,6 +215,9 @@ const todoApp = (function () {
       return;
     }
     taskList.splice(choice, 1);
+    localStorage.setItem(taskData, JSON.stringify(taskList));
+  };
+  const deleteProject = () => {
     console.log("[deleteProject] Deleting a project");
     let choice = consoleRemoveProject(projectList);
     if (choice == null) {
@@ -243,6 +252,7 @@ const todoApp = (function () {
       });
     }
     projectList.splice(choice, 1);
+    localStorage.setItem(projectData, JSON.stringify(projectList));
   };
 
   const choiceErrorMsg = () => {
