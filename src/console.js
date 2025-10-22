@@ -7,6 +7,9 @@ export {
   consoleGetDate,
   consoleAssignProject,
   consoleDisplayTasks,
+  consoleGetInputLoop,
+  consoleRemoveTask,
+  consoleRemoveProject,
 };
 
 import { isFuture } from "date-fns";
