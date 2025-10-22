@@ -151,6 +151,10 @@ const todoApp = (function () {
       consoleDisplayProjects(projectList);
     }
   };
+  const assignProject = (task) => {
+    console.log("[assignProject] Assigning task to a project");
+    task.projectId = consoleAssignProject(projectList);
+  };
   const updateTask = () => {
     console.log("[updateTask] Updating a task");
     let tmpList = taskList.map((e) => {
