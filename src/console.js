@@ -45,6 +45,20 @@ const consoleAssignProject = (projectList) => {
   return projectList[choice].projectId;
 };
 
+const consoleRemoveProject = (projectlist) => {
+  if (projectlist.length === 0) {
+    return null;
+  }
+  let tmpArray = projectlist.map((elem) => {
+    return elem.projectName;
+  });
+  let choice = consoleGetInputLoop(tmpArray, "Exit..", "Remove project");
+  if (choice == tmpArray.length - 1) {
+    return null;
+  }
+  return choice;
+};
+
 const consoleDisplayProjects = (projectList) => {
   projectList.forEach((proj) => {
     console.log(`Project details: 
