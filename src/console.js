@@ -73,6 +73,18 @@ const consoleRemoveTask = (tasklist) => {
   return choice;
 };
 
+const consoleGetInputLoop = (list, exitLine, title) => {
+  list.push(exitLine);
+  let choice = -1;
+  while (!(choice > -1 && choice < list.length)) {
+    choice = consoleGetInput(list, title);
+  }
+  if (choice == list.length - 1) {
+    return null;
+  }
+  return choice;
+};
+
 const consoleDisplayProjects = (projectList) => {
   projectList.forEach((proj) => {
     console.log(`Project details: 
