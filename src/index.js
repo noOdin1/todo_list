@@ -9,6 +9,9 @@ import {
   consoleGetDate,
   consoleAssignProject,
   consoleDisplayTasks,
+  consoleGetInputLoop,
+  consoleRemoveTask,
+  consoleRemoveProject,
 } from "./console.js";
 import { isFuture } from "date-fns";
 
