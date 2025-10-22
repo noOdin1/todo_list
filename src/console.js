@@ -106,6 +106,7 @@ const consoleDisplayTasks = (taskList) => {
       Task description/notes: ${task.taskDesc}
       Task priority: ${task.taskPriority}
       Task due date: ${task.taskDueDate}
+      Task Completed: ${task.taskComplete}
       `);
   });
 };
