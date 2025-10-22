@@ -186,39 +186,65 @@ const todoApp = (function () {
   };
 
   /* Sample data */
-  const project1 = new Project(uuidv4(), "Library Project");
-  const project2 = new Project(uuidv4(), "Video Rental Project");
-  const task1 = new Task(
-    uuidv4(),
-    project1.projectId,
-    "Finish display book function",
-    "console version first, then web UI",
-    "Important",
-    "2025-11-21",
-  );
-  const task2 = new Task(
-    uuidv4(),
-    project1.projectId,
-    "Start create book function",
-    "Check with other periodically on what is needed",
-    "Important",
-    "2025-11-01",
-  );
-  const task3 = new Task(
-    uuidv4(),
-    project2.projectId,
-    "Landing Page",
-    "Gather all the resources for this task first",
-    "Normal",
-    "2025-12-01",
-  );
+  // const project1 = new Project(uuidv4(), "Library Project");
+  // const project2 = new Project(uuidv4(), "Video Rental Project");
+  // const project3 = new Project(uuidv4(), "Local Price Checker");
+  // const task1 = new Task(
+  //   uuidv4(),
+  //   project1.projectId,
+  //   "Finish display book function",
+  //   "console version first, then web UI",
+  //   "Important",
+  //   "2025-11-21",
+  //   false,
+  // );
+  // const task2 = new Task(
+  //   uuidv4(),
+  //   project1.projectId,
+  //   "Create book function",
+  //   "Check with others periodically",
+  //   "Important",
+  //   "2025-11-01",
+  //   false,
+  // );
+  // const task3 = new Task(
+  //   uuidv4(),
+  //   project2.projectId,
+  //   "Landing Page",
+  //   "Shop photo to be included",
+  //   "Normal",
+  //   "2025-12-01",
+  //   false,
+  // );
+  // const task4 = new Task(
+  //   uuidv4(),
+  //   project3.projectId,
+  //   "Get source for prices",
+  //   "Prices must be the latest",
+  //   "Urgent",
+  //   "2025-12-11",
+  //   false,
+  // );
+  // const task5 = new Task(
+  //   uuidv4(),
+  //   project1.projectId,
+  //   "Remove book",
+  //   "Ensure complete removal",
+  //   "Urgent",
+  //   "2025-12-21",
+  //   false,
+  // );
 
   function startAppInConsole() {
-    projectList.push(project1);
-    projectList.push(project2);
-    taskList.push(task1);
-    taskList.push(task2);
-    taskList.push(task3);
+    // projectList.push(project1);
+    // projectList.push(project2);
+    // projectList.push(project3);
+    // taskList.push(task1);
+    // taskList.push(task2);
+    // taskList.push(task3);
+    // taskList.push(task4);
+    // taskList.push(task5);
+
     console.log("Start of application");
     let choice = 0;
     while (choice != Object.keys(menuOpt).length - 1) {
