@@ -84,7 +84,7 @@ const todoApp = (function () {
     set taskPriority(priority) {
       this._taskPriority = priority;
     }
-    set taskDueDate(endDate) {
+    set taskDueDate(dueDate) {
       this._taskDueDate = dueDate;
     }
   }
