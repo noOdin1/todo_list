@@ -43,13 +43,14 @@ const todoApp = (function () {
 
   /* Class to hold task information */
   class Task {
-    constructor(id, projId, name, desc, priority, dueDate) {
+    constructor(id, projId, name, desc, priority, dueDate, status = false) {
       this._taskId = id;
       this._projectId = projId;
       this._taskName = name;
       this._taskDesc = desc;
       this._taskPriority = priority;
       this._taskDueDate = dueDate;
+      this._taskComplete = status;
     }
     get taskId() {
       return this._taskId;
@@ -69,6 +70,9 @@ const todoApp = (function () {
     get taskDueDate() {
       return this._taskDueDate;
     }
+    get taskComplete() {
+      return this._taskComplete;
+    }
     set taskId(id) {
       this._taskId = id;
     }
@@ -86,6 +90,9 @@ const todoApp = (function () {
     }
     set taskDueDate(dueDate) {
       this._taskDueDate = dueDate;
+    }
+    set taskComplete(status) {
+      this._taskComplete = status;
     }
   }
   class Project {
