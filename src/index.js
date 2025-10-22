@@ -153,6 +153,26 @@ const todoApp = (function () {
   };
   const updateTask = () => {
     console.log("[updateTask] Updating a task");
+    let tmpList = taskList.map((e) => {
+      return e.taskName;
+    });
+    let choice = consoleGetInputLoop(
+      tmpList,
+      "Exit..",
+      "Choose task to update",
+    );
+    if (choice == null) {
+      return;
+    }
+    let userChoice = -1;
+    while (userChoice != Object.keys(taskItemsForUpdate).length - 1) {
+      userChoice = consoleGetInput(
+        taskItemsForUpdate,
+        "Choose task details to update",
+      );
+      let tempStr = Object.keys(taskItemsForUpdate)[userChoice];
+      taskItemsForUpdate[tempStr](taskList[choice]);
+    }
   };
   const deleteTask = () => {
     console.log("[deleteTask] Deleting a task");
