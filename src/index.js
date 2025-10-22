@@ -159,6 +159,10 @@ const todoApp = (function () {
     console.log("[changeDesc] Change descriptions/notes for a task");
     task.taskDesc = consolePromptInput("Task description/notes: ");
   };
+  const changeTaskPriority = (task) => {
+    console.log("[changeTaskPriority] Change task priority");
+    task.taskPriority = priorityLvl[consoleGetInput(priorityLvl)];
+  };
   const updateTask = () => {
     console.log("[updateTask] Updating a task");
     let tmpList = taskList.map((e) => {
