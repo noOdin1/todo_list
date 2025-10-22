@@ -161,6 +161,14 @@ const todoApp = (function () {
       return;
     }
     taskList.splice(choice, 1);
+    console.log("[deleteProject] Deleting a project");
+    let choice = consoleRemoveProject(projectList);
+    if (choice == null) {
+      return;
+    }
+
+    let projectId = projectList[choice].projectId;
+    projectList.splice(choice, 1);
   };
 
   const choiceErrorMsg = () => {
