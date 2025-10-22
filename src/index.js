@@ -214,6 +214,17 @@ const todoApp = (function () {
     },
   };
 
+  const taskItemsForUpdate = {
+    "Assign to project": assignProject,
+    "Task description/notes": changeDesc,
+    "Task priority": changeTaskPriority,
+    "Task due date": changeTaskDueDate,
+    "Task completion toggle": taskCompleteToggle,
+    "Exit..": () => {
+      console.log("Exiting task updating..");
+    },
+  };
+
   const getUserInput = (menuObj) => {
     let menuLen = Object.keys(menuObj).length;
     let menuStr = "Please enter your choice (0-" + `${menuLen - 1})`;
