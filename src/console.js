@@ -59,6 +59,20 @@ const consoleRemoveProject = (projectlist) => {
   return choice;
 };
 
+const consoleRemoveTask = (tasklist) => {
+  if (tasklist.length === 0) {
+    return null;
+  }
+  let tmpArray = tasklist.map((elem) => {
+    return elem.taskName;
+  });
+  let choice = consoleGetInputLoop(tmpArray, "Exit..", "Remove task");
+  if (choice == tmpArray.length - 1) {
+    return null;
+  }
+  return choice;
+};
+
 const consoleDisplayProjects = (projectList) => {
   projectList.forEach((proj) => {
     console.log(`Project details: 
