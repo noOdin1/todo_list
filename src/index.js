@@ -167,6 +167,11 @@ const todoApp = (function () {
     console.log("[changeTaskDueDate] Change the due date for a task");
     task.taskDueDate = consoleGetDate("Task due date (YYYY-MM-DD): ");
   };
+  const taskCompleteToggle = (task) => {
+    console.log("[taskCompleteToggle] Toggle the status of task completed");
+    // task.Complete = task.Complete ? true : false;
+    task.taskComplete = task.taskComplete ? false : true;
+  };
   const updateTask = () => {
     console.log("[updateTask] Updating a task");
     let tmpList = taskList.map((e) => {
