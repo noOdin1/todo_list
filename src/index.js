@@ -156,6 +156,11 @@ const todoApp = (function () {
   };
   const deleteTask = () => {
     console.log("[deleteTask] Deleting a task");
+    let choice = consoleRemoveTask(taskList);
+    if (choice == null) {
+      return;
+    }
+    taskList.splice(choice, 1);
   };
 
   const choiceErrorMsg = () => {
