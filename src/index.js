@@ -24,7 +24,7 @@ export class Project {}
 export class Task {}
 
 const todoApp = (function () {
-  let runConsoleVersion = true;
+  let runConsoleVersion = false;
   let projectData = "project";
   let taskData = "task";
 
