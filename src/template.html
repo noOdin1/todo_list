@@ -59,6 +59,27 @@
                 <input type="text" maxlength="36" class="textInput" id="taskDesc" name="taskDesc" /><span
                   class="txtInput"></span>
               </div>
+
+              <div class="task radio select input container" id="priorityRadioBtn">
+                <fieldset>
+                  <legend>Task Priority</legend>
+                  <div class="taskPriority listContainer">
+                    <input class="taskPriority option" type="radio" id="normal" name="taskPriority" value="normal"
+                      checked />
+                    <label for="normal">Normal</label><br />
+                  </div>
+                  <div class="taskPriority listContainer">
+                    <input class="taskPriority option" type="radio" id="important" name="taskPriority"
+                      value="important" />
+                    <label for="important">Important</label><br />
+                  </div>
+                  <div class="taskPriority listContainer">
+                    <input class="taskPriority option" type="radio" id="urgent" name="taskPriority" value="urgent" />
+                    <label for="urgent">Urgent</label>
+                  </div>
+                </fieldset>
+              </div>
+
     </div>
   </body>
 </html>
