@@ -389,5 +389,11 @@ const todoApp = (function () {
     }
   }
 
+  const runWebUI = () => {
+    readProjectData();
+    readTaskData();
+    addFormEventListener();
+  };
+
   runConsoleVersion ? startAppInConsole() : runWebUI();
 })();
