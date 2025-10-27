@@ -96,6 +96,27 @@
         <fieldset id="fieldsetDisplay">
           <legend id="legendDisplay">Display options</legend>
           <div class="dropDown container" id="displayDropDown">
+            <label for="displayOptions">Show: </label>
+            <select id="displayItemsOptions" name="displayOptions">
+              <option class="display selection" id="selectionAllProjects" value="allProjects" defaultSelected="true">
+                All Projects
+              </option>
+              <option class="display selection" id="selectionAllTasks" value="allTasks">
+                All Tasks
+              </option>
+              <option class="display selection" id="selectionUnassignedProjects" value="unassignedProjects">
+                Unassigned Projects
+              </option>
+              <option class="display selection" id="selectionUnassignedTasks" value="unassignedTasks">
+                Unassinged Tasks
+              </option>
+              <option class="display selection" id="selectionCompletedTasks" value="completedTasks">
+                Completed Tasks
+              </option>
+              <option class="display selection" id="selectionIncompleteTasks" value="incompleteTasks">
+                Incomplete Tasks
+              </option>
+            </select>
           </div>
         </fieldset>
       </div>
