@@ -16,6 +16,10 @@ import {
 import { addFormEventListener } from "./webui.js";
 import { isFuture } from "date-fns";
 
+export const projectList = []; /* Arrays of projects, this will be
+                           the array used to save to
+                           localStorage. */
+export const taskList = []; /* Arrays of task */
 // }
 
 const todoApp = (function () {
