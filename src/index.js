@@ -20,7 +20,8 @@ export const projectList = []; /* Arrays of projects, this will be
                            the array used to save to
                            localStorage. */
 export const taskList = []; /* Arrays of task */
-// }
+export class Project {}
+export class Task {}
 
 const todoApp = (function () {
   let runConsoleVersion = true;
