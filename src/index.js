@@ -13,6 +13,7 @@ import {
   consoleRemoveTask,
   consoleRemoveProject,
 } from "./console.js";
+import { addFormEventListener } from "./webui.js";
 import { isFuture } from "date-fns";
 
 // console.log("Compilation works, hello world!");
