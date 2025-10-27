@@ -389,7 +389,5 @@ const todoApp = (function () {
     }
   }
 
-  runConsoleVersion
-    ? startAppInConsole()
-    : console.log("Starting Web Application");
+  runConsoleVersion ? startAppInConsole() : runWebUI();
 })();
