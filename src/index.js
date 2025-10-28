@@ -352,13 +352,13 @@ const todoApp = (function () {
       const tmpTaskData = JSON.parse(storedTaskData);
       tmpTaskData.forEach((e) => {
         let newTask = new Task(
-          e._taskId,
-          e._projectId,
-          e._taskName,
-          e._taskDesc,
-          e._taskPriority,
-          e._taskDueDate,
-          e._taskComplete,
+          e.taskId,
+          e.projectId,
+          e.taskName,
+          e.taskDesc,
+          e.taskPriority,
+          e.taskDueDate,
+          e.taskComplete,
         );
         taskList.push(newTask);
       });
