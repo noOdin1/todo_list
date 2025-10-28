@@ -86,6 +86,11 @@ const editTaskForm = (event, obj) => {
     }
   });
 
+  let tmpInput = htmlElemId("newProjectName");
+  tmpInput.disabled = true;
+  let tmpSelect = htmlElemId("displayItemsOptions");
+  tmpSelect.disabled = true;
+
 };
 
 
