@@ -74,6 +74,9 @@ const editTaskForm = (event, obj) => {
       elem.checked = false;
     }
   });
+  htmlElemId("taskDesc").value = tmpTask.taskDesc;
+  htmlElemId("taskDueDate").value = tmpTask.taskDueDate;
+
 };
 
 
