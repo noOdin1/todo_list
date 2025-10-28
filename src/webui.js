@@ -153,6 +153,13 @@ function formTaskSubmission(event, formObj) {
       }
     }
     // cdi(taskList[pos]);
+    htmlElemId("createNewTaskLegend").textContent = "New Task";
+    htmlElemId("addTaskBtn").textContent = "Create Task";
+    htmlElemId("taskName").disabled = false;
+    let tmpInput = htmlElemId("newProjectName");
+    tmpInput.disabled = false;
+    let tmpSelect = htmlElemId("displayItemsOptions");
+    tmpSelect.disabled = false;
   }
 }
 
