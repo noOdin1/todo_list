@@ -616,6 +616,11 @@ const addEvtListDisplayDropDown = () => {
 };
 
 function addFormEventListener() {
+  populateProjectForTask();
+
   addProjectFormEventListener();
   addTaskFormEventListener();
+
+  addEvtListDisplayDropDown();
+  showInfoOnContentArea();
 }
