@@ -108,3 +108,9 @@ fieldset {
   border: var(--form-border);
 }
 
+.createProject.container,
+.createTask.container {
+  display: flex;
+  flex-direction: column;
+}
+
