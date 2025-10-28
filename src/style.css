@@ -58,7 +58,9 @@ h3 {
   grid-area: header;
   grid-column: 1 / span 8;
   grid-row: 1 / span 1;
-  /* padding: 1.5em; */
+  padding: 1.5em;
+  padding-left: 15em;
+  padding-right: 15em;
   border-top-left-radius: var(--container-border-radius);
   border-top-right-radius: var(--container-border-radius);
   margin-bottom: var(--internal-container-spacing);
