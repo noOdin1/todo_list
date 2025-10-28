@@ -422,6 +422,12 @@ const displayAllProjects = (displayType) => {
   });
   contentArea.appendChild(projectSection);
 };
+const displayUnassignedProjects = () => {
+  clo("Displaying all unassigned projects");
+  let contentArea = document.getElementById("displayArea");
+  removeAllChildElemById(contentArea);
+  displayAllProjects("unassigned");
+};
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
     "projectIdForTaskDropDown",
