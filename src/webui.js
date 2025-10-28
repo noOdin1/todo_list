@@ -361,6 +361,8 @@ const showTasksForProject = (event) => {
   displayAllTasks(tmpProjectId);
 };
 
+const displayAllProjects = (displayType) => {
+};
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
     "projectIdForTaskDropDown",
