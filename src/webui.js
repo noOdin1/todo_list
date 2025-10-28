@@ -91,6 +91,10 @@ const editTaskForm = (event, obj) => {
   let tmpSelect = htmlElemId("displayItemsOptions");
   tmpSelect.disabled = true;
 
+  let formLegend = htmlElemId("createNewTaskLegend");
+  formLegend.textContent = "Edit Task";
+  formLegend.classList.add(tmpTaskId);
+  htmlElemId("addTaskBtn").textContent = "Save Edits";
 };
 
 
