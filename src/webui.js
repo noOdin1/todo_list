@@ -358,6 +358,7 @@ const showTasksForProject = (event) => {
       tmpProjectName = elem.projectName;
     }
   });
+  displayAllTasks(tmpProjectId);
 };
 
 function populateProjectForTask() {
