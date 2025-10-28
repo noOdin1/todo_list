@@ -120,3 +120,9 @@ fieldset {
   margin-bottom: 0.5em;
 }
 
+.input.create.container {
+  display: flex;
+  flex-direction: column;
+  padding: var(--input-widgets-spacing);
+}
+
