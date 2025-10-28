@@ -176,6 +176,14 @@ function formTaskSubmission(event, formObj) {
   }
 }
 
+function addTaskFormEventListener() {
+  let formTask = document.getElementById("createNewTask");
+  formTask.addEventListener("submit", (event) => {
+    event.preventDefault();
+    formTaskSubmission(event, formTask);
+  });
+}
+
 function addFormEventListener() {
   addProjectFormEventListener();
   addTaskFormEventListener();
