@@ -228,3 +228,8 @@ button {
   border: var(--css_visual_border_guide);
 }
 
+.remove.project,
+.remove.task {
+  background: #751b00;
+}
+
