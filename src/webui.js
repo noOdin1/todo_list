@@ -98,6 +98,8 @@ const editTaskForm = (event, obj) => {
 };
 
 const removeCard = (event) => {
+  let tmpId = event.target.id.replace("remove_", "");
+  let pos = 0;
 };
 
 
