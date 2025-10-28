@@ -188,6 +188,162 @@ const displayAllTasks = (taskProject) => {
     "taskSubSection",
   );
   taskSection.appendChild(taskCardSection);
+  tmpTaskList.forEach((item) => {
+    let tmpDiv = createDiv(
+      ["display", "task", "item", "div", "card"],
+      item.taskId,
+    );
+    let tmpParaNameLbl = createP([
+      "display",
+      "label",
+      "task",
+      "name",
+      "card",
+      "para",
+    ]);
+    tmpParaNameLbl.textContent = "Task Name: ";
+    let tmpParaNameVal = createP([
+      "display",
+      "value",
+      "task",
+      "name",
+      "card",
+      "para",
+    ]);
+    tmpParaNameVal.textContent = item.taskName;
+
+    let tmpProjectNameStr = "Unassigned";
+    projectList.forEach((projectItem) => {
+      if (projectItem.projectId == item.projectId) {
+        tmpProjectNameStr = projectItem.projectName;
+      }
+    });
+    let tmpParaProjectNameLbl = createP([
+      "display",
+      "label",
+      "task",
+      "projectName",
+      "card",
+      "para",
+    ]);
+    tmpParaProjectNameLbl.textContent = "Project Name: ";
+    let tmpParaProjectNameVal = createP([
+      "display",
+      "value",
+      "task",
+      "projectName",
+      "card",
+      "para",
+    ]);
+    tmpParaProjectNameVal.textContent = tmpProjectNameStr;
+
+    let tmpParaDescLbl = createP([
+      "display",
+      "label",
+      "task",
+      "desc",
+      "card",
+      "para",
+    ]);
+    tmpParaDescLbl.textContent = "Task Desciption/notes: ";
+    let tmpParaDescVal = createP([
+      "display",
+      "value",
+      "task",
+      "desc",
+      "card",
+      "para",
+    ]);
+    tmpParaDescVal.textContent = item.taskDesc;
+
+    let tmpParaPriorityLbl = createP([
+      "display",
+      "label",
+      "task",
+      "priority",
+      "card",
+      "para",
+    ]);
+    tmpParaPriorityLbl.textContent = "Task Priority:";
+    let tmpParaPriorityVal = createP([
+      "display",
+      "value",
+      "task",
+      "priority",
+      "card",
+      "para",
+    ]);
+    tmpParaPriorityVal.classList.add(item.taskPriority.toLowerCase());
+    tmpParaPriorityVal.textContent = item.taskPriority;
+
+    let tmpParaDueDateLbl = createP([
+      "display",
+      "label",
+      "task",
+      "duedate",
+      "card",
+      "para",
+    ]);
+    tmpParaDueDateLbl.textContent = "Task Due Date:";
+    let tmpParaDueDateVal = createP([
+      "display",
+      "value",
+      "task",
+      "duedate",
+      "card",
+      "para",
+    ]);
+    tmpParaDueDateVal.textContent = item.taskDueDate;
+
+    let tmpParaCompleteLbl = createP([
+      "display",
+      "label",
+      "task",
+      "complete",
+      "card",
+      "para",
+    ]);
+    tmpParaCompleteLbl.textContent = "Task status: ";
+    let tmpStr = item.taskComplete ? "Complete" : "Incomplete";
+    let tmpCompletedBtn = createButton(
+      ["completed", "task", "display", "info", tmpStr],
+      "completed_" + item.taskId,
+      tmpStr,
+    );
+    tmpCompletedBtn.addEventListener("click", (event) => {
+      item.taskComplete = item.taskComplete ? false : true;
+      showInfoOnContentArea();
+    });
+    let tmpEditBtn = createButton(
+      ["edit", "task", "display", "info"],
+      "edit_" + item.taskId,
+      "Edit",
+    );
+    let tmpRemoveBtn = createButton(
+      ["remove", "task", "display", "info"],
+      "remove_task_" + item.taskId,
+      "Remove",
+    );
+    tmpRemoveBtn.addEventListener("click", removeCard);
+    tmpEditBtn.addEventListener("click", () => {
+      editTaskForm(event, tmpEditBtn);
+    });
+    tmpDiv.appendChild(tmpParaNameLbl);
+    tmpDiv.appendChild(tmpParaNameVal);
+    tmpDiv.appendChild(tmpParaProjectNameLbl);
+    tmpDiv.appendChild(tmpParaProjectNameVal);
+    tmpDiv.appendChild(tmpParaDescLbl);
+    tmpDiv.appendChild(tmpParaDescVal);
+    tmpDiv.appendChild(tmpParaPriorityLbl);
+    tmpDiv.appendChild(tmpParaPriorityVal);
+    tmpDiv.appendChild(tmpParaDueDateLbl);
+    tmpDiv.appendChild(tmpParaDueDateVal);
+    tmpDiv.appendChild(tmpParaCompleteLbl);
+    tmpDiv.appendChild(tmpCompletedBtn);
+    tmpDiv.appendChild(tmpEditBtn);
+    tmpDiv.appendChild(tmpRemoveBtn);
+    taskCardSection.appendChild(tmpDiv);
+  });
 };
 
 function populateProjectForTask() {
