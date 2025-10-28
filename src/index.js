@@ -22,6 +22,8 @@ export const projectList = []; /* Arrays of projects, this will be
 export const taskList = []; /* Arrays of task */
 export class Project {}
 export class Task {}
+export const projectData = "project";
+export const taskData = "task";
 
 const todoApp = (function () {
   let runConsoleVersion = false;
