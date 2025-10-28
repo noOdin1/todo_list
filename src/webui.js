@@ -18,3 +18,8 @@ import {
   createSelect,
   createOption,
 } from "./element_creator.js";
+import {
+  removeAllChildElemByClass,
+  removeAllChildElemById,
+} from "./removeAllChildElem.js";
+
