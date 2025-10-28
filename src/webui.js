@@ -375,6 +375,7 @@ const displayAllProjects = (displayType) => {
     "projectSectionTitle",
   );
   tmpH2.textContent = "Projects";
+  let tmpProjectList = projectList.slice();
 };
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
