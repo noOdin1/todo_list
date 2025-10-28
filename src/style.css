@@ -180,3 +180,7 @@ div.taskPriority.listContainer {
   height: 1.8em;
 }
 
+.taskPriority.listContainer {
+  margin: 0.2em 0;
+}
+
