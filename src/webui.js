@@ -115,6 +115,13 @@ const removeCard = (event) => {
     });
     projectList.splice(pos, 1);
   }
+  if (tmpId.includes("task_")) {
+    tmpId = tmpId.replace("task_", "");
+    taskList.forEach((item, index) => {
+      if (tmpId == item.taskId) {
+        pos = index;
+      }
+    });
 };
 
 
