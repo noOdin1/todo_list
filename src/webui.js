@@ -97,6 +97,7 @@ function formTaskSubmission(event, formObj) {
   cdi(event.target.id);
   let buttonTxt = document.getElementById("taskSubmitBtnDiv").textContent;
 
+  let tmpTask = new Task();
   }
 }
 
