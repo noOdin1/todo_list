@@ -346,6 +346,8 @@ const displayAllTasks = (taskProject) => {
   });
   contentArea.appendChild(taskSection);
 };
+const showTasksForProject = (event) => {
+};
 
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
