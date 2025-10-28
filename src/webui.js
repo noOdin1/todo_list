@@ -47,6 +47,8 @@ const htmlElemTag = (str) => {
   return document.getElementsByTagName(str);
 };
 
+const editTaskForm = (event, obj) => {
+};
 
 
 
