@@ -159,6 +159,13 @@ const displayAllTasks = (taskProject) => {
           tmpTaskList.push(elem);
         }
       });
+    } else if (taskProject.toLowerCase() == "incomplete") {
+      tmpH2.textContent = "Incomplete Tasks";
+      taskList.forEach((elem) => {
+        if (!elem.taskComplete) {
+          tmpTaskList.push(elem);
+        }
+      });
   }
 };
 
