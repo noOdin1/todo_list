@@ -396,6 +396,31 @@ const displayAllProjects = (displayType) => {
     "projectSubSection",
   );
   projectSection.appendChild(projectCardSection);
+  tmpProjectList.forEach((item) => {
+    let tmpDiv = createDiv(
+      ["display", "project", "item", "div", "card"],
+      item.projectId,
+    );
+    let tmpPara = createP(["display", "project", "name", "card", "para"]);
+    tmpPara.textContent = item.projectName;
+    let tmpRemoveBtn = createButton(
+      ["remove", "project", "display", "info"],
+      "remove_project_" + item.projectId,
+      "Remove",
+    );
+    let tmpShowTasksBtn = createButton(
+      ["show", "related", "task", "display", "info"],
+      "showRelatedTasksBtn_" + item.projectId,
+      "Show Tasks",
+    );
+    tmpShowTasksBtn.addEventListener("click", showTasksForProject);
+    tmpRemoveBtn.addEventListener("click", removeCard);
+    tmpDiv.appendChild(tmpPara);
+    tmpDiv.appendChild(tmpShowTasksBtn);
+    tmpDiv.appendChild(tmpRemoveBtn);
+    projectCardSection.appendChild(tmpDiv);
+  });
+  contentArea.appendChild(projectSection);
 };
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
