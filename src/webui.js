@@ -23,3 +23,15 @@ import {
   removeAllChildElemById,
 } from "./removeAllChildElem.js";
 
+const clo = (str) => {
+  console.log(str);
+};
+
+const cdi = (elem) => {
+  console.dir(elem);
+};
+
+const cta = (elem) => {
+  console.table(elem);
+};
+
