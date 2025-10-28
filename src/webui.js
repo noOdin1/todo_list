@@ -47,3 +47,6 @@ const htmlElemTag = (str) => {
   return document.getElementsByTagName(str);
 };
 
+function addFormEventListener() {
+  addProjectFormEventListener();
+}
