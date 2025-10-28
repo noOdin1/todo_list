@@ -124,6 +124,7 @@ const removeCard = (event) => {
     });
     taskList.splice(pos, 1);
   }
+  showInfoOnContentArea();
 };
 
 
