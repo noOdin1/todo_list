@@ -101,6 +101,12 @@ const removeCard = (event) => {
   let tmpId = event.target.id.replace("remove_", "");
   let pos = 0;
   if (tmpId.includes("project_")) {
+    tmpId = tmpId.replace("project_", "");
+    projectList.forEach((item, index) => {
+      if (tmpId == item.projectId) {
+        pos = index;
+      }
+    });
   }
 };
 
