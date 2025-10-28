@@ -50,6 +50,19 @@ const htmlElemTag = (str) => {
 function addProjectFormEventListener() {
   let formProject = document.getElementById("createNewProject");
   formProject.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(formProject);
+    let tmpProject = new Project();
+    tmpProject.projectId = uuidv4();
+    for (const [name, value] of formData) {
+      if (name == "projectName") {
+        tmpProject.projectName = value;
+      }
+    }
+    projectList.push(tmpProject);
+    formProject.reset();
+    showInfoOnContentArea();
+    populateProjectForTask();
   });
 }
 
