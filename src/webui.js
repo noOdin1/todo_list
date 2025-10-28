@@ -127,6 +127,8 @@ const removeCard = (event) => {
   showInfoOnContentArea();
 };
 
+const displayAllTasks = (taskProject) => {
+};
 
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
