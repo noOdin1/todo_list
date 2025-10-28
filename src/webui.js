@@ -66,6 +66,14 @@ const editTaskForm = (event, obj) => {
     }
   });
 
+  let optGrp = htmlElemClass("taskPriority option");
+  Array.from(optGrp).forEach((elem) => {
+    if (elem.value.toLowerCase() == tmpTask.taskPriority.toLowerCase()) {
+      elem.checked = true;
+    } else {
+      elem.checked = false;
+    }
+  });
 };
 
 
