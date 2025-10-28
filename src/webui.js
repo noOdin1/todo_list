@@ -120,6 +120,7 @@ function formTaskSubmission(event, formObj) {
     }
     taskList.push(tmpTask);
     formObj.reset();
+    showInfoOnContentArea();
   }
 }
 
