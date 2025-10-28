@@ -122,6 +122,8 @@ function formTaskSubmission(event, formObj) {
     formObj.reset();
     showInfoOnContentArea();
   }
+  if (buttonTxt.includes("Save Edits")) {
+  }
 }
 
 function addFormEventListener() {
