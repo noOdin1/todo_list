@@ -49,6 +49,13 @@ const htmlElemTag = (str) => {
 
 const editTaskForm = (event, obj) => {
   let tmpTaskId = event.target.id.replace("edit_", "");
+  let tmpTask = "";
+  populateProjectForTask();
+  taskList.forEach((elem) => {
+    if (elem.taskId == tmpTaskId) {
+      tmpTask = elem;
+    }
+  });
 };
 
 
