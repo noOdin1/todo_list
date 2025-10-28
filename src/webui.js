@@ -344,6 +344,7 @@ const displayAllTasks = (taskProject) => {
     tmpDiv.appendChild(tmpRemoveBtn);
     taskCardSection.appendChild(tmpDiv);
   });
+  contentArea.appendChild(taskSection);
 };
 
 function populateProjectForTask() {
