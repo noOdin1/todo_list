@@ -143,3 +143,9 @@ div.taskPriority.listContainer {
   margin-bottom: var(--input-widgets-spacing);
 }
 
+#projectSubmitBtnDiv,
+#taskSubmitBtnDiv {
+  margin-top: calc(var(--input-widgets-spacing) * 2.5);
+  margin-bottom: calc(var(--input-widgets-spacing) * 2);
+}
+
