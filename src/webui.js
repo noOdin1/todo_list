@@ -208,6 +208,16 @@ const showInfoOnContentArea = () => {
   displaySelections[selectedOpt]();
 };
 
+const addEvtListDisplayDropDown = () => {
+  let optionItems = document.getElementsByClassName("selection");
+  let optionsItemsArray = Array.from(optionItems);
+  optionsItemsArray.forEach((item) => {
+    item.addEventListener("click", (event) => {
+      displaySelections[event.target.id]();
+    });
+  });
+};
+
 function addFormEventListener() {
   addProjectFormEventListener();
   addTaskFormEventListener();
