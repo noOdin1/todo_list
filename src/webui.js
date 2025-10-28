@@ -161,6 +161,8 @@ function formTaskSubmission(event, formObj) {
     let tmpSelect = htmlElemId("displayItemsOptions");
     tmpSelect.disabled = false;
 
+    populateProjectForTask();
+
     let btnGrp = htmlElemTag("button");
     Array.from(btnGrp).forEach((btn) => {
       if (btn.id != "addTaskBtn") {
@@ -168,6 +170,9 @@ function formTaskSubmission(event, formObj) {
         btn.removeAttribute("style");
       }
     });
+    formObj.reset();
+    formLegend.classList = "";
+    showInfoOnContentArea();
   }
 }
 
