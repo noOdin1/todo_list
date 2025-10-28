@@ -123,6 +123,17 @@ function formTaskSubmission(event, formObj) {
     showInfoOnContentArea();
   }
   if (buttonTxt.includes("Save Edits")) {
+    let formObj = document.getElementById("createNewTask");
+    let formLegend = htmlElemId("createNewTaskLegend");
+    let tmpTaskId = formLegend.classList;
+
+    clo("[formTaskSubmission] Task id to edit: " + tmpTaskId);
+    let pos = -1;
+    taskList.forEach((item, index) => {
+      if (item.taskId == tmpTaskId) {
+        pos = index;
+      }
+    });
   }
 }
 
