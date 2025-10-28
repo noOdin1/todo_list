@@ -128,6 +128,8 @@ const removeCard = (event) => {
 };
 
 const displayAllTasks = (taskProject) => {
+  let contentArea = document.getElementById("displayArea");
+  removeAllChildElemById(contentArea);
 };
 
 function populateProjectForTask() {
