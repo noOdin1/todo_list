@@ -138,3 +138,8 @@ div.taskPriority.listContainer {
   gap: var(--input-widgets-spacing);
 }
 
+.duedate.input.container {
+  margin-top: var(--input-widgets-spacing);
+  margin-bottom: var(--input-widgets-spacing);
+}
+
