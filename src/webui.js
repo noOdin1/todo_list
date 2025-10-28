@@ -115,6 +115,7 @@ const removeCard = (event) => {
       }
     });
     projectList.splice(pos, 1);
+    localStorage.setItem(projectData, JSON.stringify(taskList));
   }
   if (tmpId.includes("task_")) {
     tmpId = tmpId.replace("task_", "");
@@ -124,6 +125,7 @@ const removeCard = (event) => {
       }
     });
     taskList.splice(pos, 1);
+    localStorage.setItem(taskData, JSON.stringify(taskList));
   }
   showInfoOnContentArea();
 };
@@ -484,6 +486,7 @@ function addProjectFormEventListener() {
       }
     }
     projectList.push(tmpProject);
+    localStorage.setItem(projectData, JSON.stringify(projectList));
     formProject.reset();
     showInfoOnContentArea();
     populateProjectForTask();
@@ -516,7 +519,9 @@ function formTaskSubmission(event, formObj) {
         tmpTask.taskDueDate = value;
       }
     }
+    tmpTask.taskComplete = false;
     taskList.push(tmpTask);
+    localStorage.setItem(taskData, JSON.stringify(taskList));
     formObj.reset();
     showInfoOnContentArea();
   }
@@ -568,6 +573,7 @@ function formTaskSubmission(event, formObj) {
         btn.removeAttribute("style");
       }
     });
+    localStorage.setItem(taskData, JSON.stringify(taskList));
     formObj.reset();
     formLegend.classList = "";
     showInfoOnContentArea();
