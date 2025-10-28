@@ -98,3 +98,13 @@ h3 {
   color: white;
   /* font-size: clamp(1.8rem, calc(7vw + 1rem), 3rem); */
 }
+legend {
+  margin-left: var(--input-widgets-spacing);
+  padding: 0 0.2em;
+  border: var(--form-border);
+}
+
+fieldset {
+  border: var(--form-border);
+}
+
