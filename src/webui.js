@@ -107,6 +107,12 @@ const removeCard = (event) => {
         pos = index;
       }
     });
+    /* Remove task that references this project */
+    taskList.filter((task) => {
+      if (task.projectId == tmpId) {
+        task.projectId = "unassigned";
+      }
+    });
   }
 };
 
