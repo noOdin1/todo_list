@@ -113,6 +113,7 @@ const removeCard = (event) => {
         task.projectId = "unassigned";
       }
     });
+    projectList.splice(pos, 1);
   }
 };
 
