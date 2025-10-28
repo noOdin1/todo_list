@@ -68,4 +68,5 @@ function addProjectFormEventListener() {
 
 function addFormEventListener() {
   addProjectFormEventListener();
+  addTaskFormEventListener();
 }
