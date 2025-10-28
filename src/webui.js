@@ -77,6 +77,15 @@ const editTaskForm = (event, obj) => {
   htmlElemId("taskDesc").value = tmpTask.taskDesc;
   htmlElemId("taskDueDate").value = tmpTask.taskDueDate;
 
+  /* Disable all buttons except for */
+  let btnGrp = htmlElemTag("button");
+  Array.from(btnGrp).forEach((btn) => {
+    if (btn.id != "addTaskBtn") {
+      btn.disabled = true;
+      btn.setAttribute("style", "background-color: darkgray;");
+    }
+  });
+
 };
 
 
