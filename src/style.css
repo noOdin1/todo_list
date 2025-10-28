@@ -172,3 +172,9 @@ div.taskPriority.listContainer {
   border: 2px solid black;
 }
 
+#projectIdForTaskDropDown,
+#taskDueDate,
+#displayItemsOptions {
+  height: 1.8em;
+}
+
