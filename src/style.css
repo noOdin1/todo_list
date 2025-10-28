@@ -52,6 +52,7 @@ h3 {
     "header header header header header header header header"
     "left left content content content content content content";
   border: var(--css_visual_border_guide);
+  /* overflow: scroll; */
 }
 
 .top.container {
