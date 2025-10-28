@@ -205,3 +205,16 @@ button {
   /* border: var(--css_visual_border_guide); */
 }
 
+.display.project.div.card {
+  width: 24.6%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--input-widgets-spacing);
+  padding: 0.2em;
+  border: var(--card-border);
+}
+
+.display.project.card.para {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
