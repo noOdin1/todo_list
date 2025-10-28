@@ -434,6 +434,12 @@ const displayUnassignedTasks = () => {
   removeAllChildElemById(contentArea);
   displayAllTasks("unassigned");
 };
+const displayCompletedTasks = () => {
+  clo("Displaying all completed tasks");
+  let contentArea = document.getElementById("displayArea");
+  removeAllChildElemById(contentArea);
+  displayAllTasks("completed");
+};
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
     "projectIdForTaskDropDown",
