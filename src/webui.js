@@ -353,6 +353,11 @@ const showTasksForProject = (event) => {
   );
   let tmpProjectId = event.target.id.replace("showRelatedTasksBtn_", "");
   let tmpProjectName = "";
+  projectList.forEach((elem) => {
+    if (elem.projectId == tmpProjectId) {
+      tmpProjectName = elem.projectName;
+    }
+  });
 };
 
 function populateProjectForTask() {
