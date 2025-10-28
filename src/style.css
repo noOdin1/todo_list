@@ -161,3 +161,14 @@ div.taskPriority.listContainer {
   margin-bottom: 0.4em;
 }
 
+#newProjectName,
+#projectIdForTaskDropDown,
+#taskDueDate,
+#taskName,
+#taskDesc,
+#displayItemsOptions {
+  height: 1.6em;
+  padding: 0.2em;
+  border: 2px solid black;
+}
+
