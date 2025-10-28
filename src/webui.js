@@ -140,6 +140,9 @@ const displayAllTasks = (taskProject) => {
     "taskSectionTitle",
   );
   tmpH2.textContent = "Tasks";
+  let tmpTaskList;
+  tmpTaskList = taskList.slice();
+
 };
 
 function populateProjectForTask() {
