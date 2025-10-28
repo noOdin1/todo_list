@@ -47,6 +47,12 @@ const htmlElemTag = (str) => {
   return document.getElementsByTagName(str);
 };
 
+function addProjectFormEventListener() {
+  let formProject = document.getElementById("createNewProject");
+  formProject.addEventListener("submit", (event) => {
+  });
+}
+
 function addFormEventListener() {
   addProjectFormEventListener();
 }
