@@ -64,7 +64,15 @@ h3 {
   border-top-left-radius: var(--container-border-radius);
   border-top-right-radius: var(--container-border-radius);
   margin-bottom: var(--internal-container-spacing);
-  border: var(--css_visual_border_guide);
+  background-image: linear-gradient(
+    to bottom,
+    var(--bgcolor) 0%,
+    rgba(30, 79, 20, 0.7) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .left.container {
