@@ -166,6 +166,21 @@ const displayAllTasks = (taskProject) => {
           tmpTaskList.push(elem);
         }
       });
+    } else {
+      /* Shows task assigned to a project */
+      let tmpStr = "";
+      projectList.forEach((elem) => {
+        if (elem.projectId == taskProject) {
+          tmpStr = elem.projectName;
+        }
+      });
+      tmpH2.textContent = "Project name: " + tmpStr;
+      taskList.forEach((elem) => {
+        if (taskProject == elem.projectId) {
+          tmpTaskList.push(elem);
+        }
+      });
+    }
   }
 };
 
