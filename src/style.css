@@ -32,6 +32,9 @@ h3 {
 
   --input-widgets-spacing: 0.3em;
   --container-border-radius: 0.5em;
+  --bgcolor: #1e4f14;
+  --form-border: 0.15em solid var(--bgcolor);
+  --card-border: 2px solid var(--bgcolor);
   /* --css_visual_border_guide: 1px solid MediumVioletRed; */
   --css_visual_border_guide: 1px solid transparent;
 }
