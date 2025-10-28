@@ -92,6 +92,14 @@ function addProjectFormEventListener() {
   });
 }
 
+function formTaskSubmission(event, formObj) {
+  clo("[formTaskSubmission] event: ");
+  cdi(event.target.id);
+  let buttonTxt = document.getElementById("taskSubmitBtnDiv").textContent;
+
+  }
+}
+
 function addFormEventListener() {
   addProjectFormEventListener();
   addTaskFormEventListener();
