@@ -130,6 +130,16 @@ const removeCard = (event) => {
 const displayAllTasks = (taskProject) => {
   let contentArea = document.getElementById("displayArea");
   removeAllChildElemById(contentArea);
+  let taskSection = createDiv(
+    ["display", "task", "section", "div", "container"],
+    "taskSection",
+  );
+  let tmpH2 = elementFactory(
+    "h2",
+    ["displayDiv", "task", "title"],
+    "taskSectionTitle",
+  );
+  tmpH2.textContent = "Tasks";
 };
 
 function populateProjectForTask() {
