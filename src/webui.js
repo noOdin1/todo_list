@@ -48,6 +48,7 @@ const htmlElemTag = (str) => {
 };
 
 const editTaskForm = (event, obj) => {
+  let tmpTaskId = event.target.id.replace("edit_", "");
 };
 
 
