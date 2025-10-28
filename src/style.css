@@ -258,3 +258,7 @@ button {
   background-color: #ededed;
 }
 
+.display.label {
+  background-color: transparent;
+}
+
