@@ -160,6 +160,14 @@ function formTaskSubmission(event, formObj) {
     tmpInput.disabled = false;
     let tmpSelect = htmlElemId("displayItemsOptions");
     tmpSelect.disabled = false;
+
+    let btnGrp = htmlElemTag("button");
+    Array.from(btnGrp).forEach((btn) => {
+      if (btn.id != "addTaskBtn") {
+        btn.disabled = false;
+        btn.removeAttribute("style");
+      }
+    });
   }
 }
 
