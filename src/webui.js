@@ -99,6 +99,26 @@ function formTaskSubmission(event, formObj) {
 
   let tmpTask = new Task();
   if (buttonTxt.includes("Create Task")) {
+    const formData = new FormData(formObj);
+    tmpTask.taskId = uuidv4();
+    for (const [name, value] of formData) {
+      if (name == "projectIdForTask") {
+        tmpTask.projectId = value;
+      }
+      if (name == "taskName") {
+        tmpTask.taskName = value;
+      }
+      if (name == "taskDesc") {
+        tmpTask.taskDesc = value;
+      }
+      if (name == "taskPriority") {
+        tmpTask.taskPriority = value;
+      }
+      if (name == "taskDueDate") {
+        tmpTask.taskDueDate = value;
+      }
+    }
+    taskList.push(tmpTask);
   }
 }
 
