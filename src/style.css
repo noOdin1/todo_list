@@ -246,3 +246,15 @@ button {
   border: var(--css_visual_border_guide);
 }
 
+.display.task.item.div.card {
+  display: flex;
+  flex-direction: column;
+  width: min(255px, 275px);
+  height: max-content; /* do not expand div */
+  font-size: 0.5em;
+  padding: var(--input-widgets-spacing);
+  border: var(--card-border);
+  gap: var(--input-widgets-spacing);
+  background-color: #ededed;
+}
+
