@@ -390,6 +390,12 @@ const displayAllProjects = (displayType) => {
       }
     });
   }
+  projectSection.appendChild(tmpH2);
+  let projectCardSection = createDiv(
+    ["display", "project", "subSection", "div", "container"],
+    "projectSubSection",
+  );
+  projectSection.appendChild(projectCardSection);
 };
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
