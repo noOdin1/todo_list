@@ -30,6 +30,7 @@ h3 {
   --height-margin-centered: calc(calc(100dvh - var(--height-value)) / 2);
   --internal-container-spacing: 0.2em;
 
+  --input-widgets-spacing: 0.3em;
   --container-border-radius: 0.5em;
   --css_visual_border_guide: 1px solid MediumVioletRed;
   /* --css_visual_border_guide: 1px solid transparent; */
