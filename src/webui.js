@@ -193,6 +193,21 @@ let displaySelections = {
   selectionIncompleteTasks: displayIncompleteTasks,
 };
 
+/**
+ * Other functions that finishes and initiates a info display
+ * in the content area will call this function
+ **/
+const showInfoOnContentArea = () => {
+  let displaySelectionDD = document.getElementsByClassName("display selection");
+  let selectedOpt = "";
+  Array.from(displaySelectionDD).forEach((elem) => {
+    if (elem.selected == true) {
+      selectedOpt = elem.id;
+    }
+  });
+  displaySelections[selectedOpt]();
+};
+
 function addFormEventListener() {
   addProjectFormEventListener();
   addTaskFormEventListener();
