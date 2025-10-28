@@ -97,6 +97,8 @@ const editTaskForm = (event, obj) => {
   htmlElemId("addTaskBtn").textContent = "Save Edits";
 };
 
+const removeCard = (event) => {
+};
 
 
 function populateProjectForTask() {
