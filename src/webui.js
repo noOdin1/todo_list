@@ -440,6 +440,13 @@ const displayCompletedTasks = () => {
   removeAllChildElemById(contentArea);
   displayAllTasks("completed");
 };
+const displayIncompleteTasks = () => {
+  clo("Displaying all incomplete tasks");
+  let contentArea = document.getElementById("displayArea");
+  removeAllChildElemById(contentArea);
+  displayAllTasks("incomplete");
+};
+
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
     "projectIdForTaskDropDown",
