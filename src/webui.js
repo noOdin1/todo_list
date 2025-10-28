@@ -35,3 +35,15 @@ const cta = (elem) => {
   console.table(elem);
 };
 
+const htmlElemId = (str) => {
+  return document.getElementById(str);
+};
+
+const htmlElemClass = (str) => {
+  return document.getElementsByClassName(str);
+};
+
+const htmlElemTag = (str) => {
+  return document.getElementsByTagName(str);
+};
+
