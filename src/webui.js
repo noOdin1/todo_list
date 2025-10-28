@@ -152,6 +152,13 @@ const displayAllTasks = (taskProject) => {
           tmpTaskList.push(elem);
         }
       });
+    } else if (taskProject.toLowerCase() == "completed") {
+      tmpH2.textContent = "Completed Tasks";
+      taskList.forEach((elem) => {
+        if (elem.taskComplete) {
+          tmpTaskList.push(elem);
+        }
+      });
   }
 };
 
