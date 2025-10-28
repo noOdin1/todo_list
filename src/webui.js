@@ -134,6 +134,25 @@ function formTaskSubmission(event, formObj) {
         pos = index;
       }
     });
+    const formData = new FormData(formObj);
+    for (const [name, value] of formData) {
+      if (name == "projectIdForTask") {
+        taskList[pos].projectId = value;
+      }
+      if (name == "taskName") {
+        taskList[pos].taskName = value;
+      }
+      if (name == "taskDesc") {
+        taskList[pos].taskDesc = value;
+      }
+      if (name == "taskPriority") {
+        taskList[pos].taskPriority = value;
+      }
+      if (name == "taskDueDate") {
+        taskList[pos].taskDueDate = value;
+      }
+    }
+    // cdi(taskList[pos]);
   }
 }
 
