@@ -233,3 +233,16 @@ button {
   background: #751b00;
 }
 
+.display.task.subSection.div.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 79vh;
+  padding: calc(var(--input-widgets-spacing) * 1.5);
+  padding-top: 0;
+  padding-bottom: 0;
+  gap: calc(var(--input-widgets-spacing) * 2);
+  overflow-y: scroll;
+  border: var(--css_visual_border_guide);
+}
+
