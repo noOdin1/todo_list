@@ -98,6 +98,7 @@ function formTaskSubmission(event, formObj) {
   let buttonTxt = document.getElementById("taskSubmitBtnDiv").textContent;
 
   let tmpTask = new Task();
+  if (buttonTxt.includes("Create Task")) {
   }
 }
 
