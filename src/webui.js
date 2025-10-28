@@ -184,6 +184,15 @@ function addTaskFormEventListener() {
   });
 }
 
+let displaySelections = {
+  selectionAllProjects: displayAllProjects,
+  selectionAllTasks: displayAllTasks,
+  selectionUnassignedProjects: displayUnassignedProjects,
+  selectionUnassignedTasks: displayUnassignedTasks,
+  selectionCompletedTasks: displayCompletedTasks,
+  selectionIncompleteTasks: displayIncompleteTasks,
+};
+
 function addFormEventListener() {
   addProjectFormEventListener();
   addTaskFormEventListener();
