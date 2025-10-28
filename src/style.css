@@ -130,3 +130,11 @@ div.taskPriority.listContainer {
   margin-left: calc(var(--input-widgets-spacing) * 2);
 }
 
+.task.input.container,
+.project.input.container,
+.dropDown.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--input-widgets-spacing);
+}
+
