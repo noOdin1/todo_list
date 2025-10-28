@@ -218,3 +218,13 @@ button {
   font-size: 1.2rem;
   font-weight: 600;
 }
+
+.display.project.subSection.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: var(--input-widgets-spacing);
+  gap: var(--input-widgets-spacing);
+  border: var(--css_visual_border_guide);
+}
+
