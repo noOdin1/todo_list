@@ -143,6 +143,16 @@ const displayAllTasks = (taskProject) => {
   let tmpTaskList;
   tmpTaskList = taskList.slice();
 
+  if (taskProject != undefined) {
+    tmpTaskList = [];
+    if (taskProject.toLowerCase() == "unassigned") {
+      tmpH2.textContent = "Tasks: Unassigned";
+      taskList.forEach((elem) => {
+        if (elem.projectId.toLowerCase() == "unassigned") {
+          tmpTaskList.push(elem);
+        }
+      });
+  }
 };
 
 function populateProjectForTask() {
