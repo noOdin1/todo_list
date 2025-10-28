@@ -149,3 +149,15 @@ div.taskPriority.listContainer {
   margin-bottom: calc(var(--input-widgets-spacing) * 2);
 }
 
+.dropDown.container {
+  margin-bottom: calc(var(--input-widgets-spacing) * 2);
+}
+
+#displayDropDown {
+  padding: 0.3em;
+}
+
+#dueDateCalender {
+  margin-bottom: 0.4em;
+}
+
