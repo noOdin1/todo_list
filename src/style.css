@@ -198,3 +198,10 @@ button {
   border-radius: 1px;
 }
 
+.display.project.section {
+  display: flex;
+  flex-direction: column;
+  padding: var(--input-widgets-spacing);
+  /* border: var(--css_visual_border_guide); */
+}
+
