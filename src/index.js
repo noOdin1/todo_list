@@ -336,7 +336,8 @@ const todoApp = (function () {
     if (storedProjectData) {
       const tmpProjectData = JSON.parse(storedProjectData);
       tmpProjectData.forEach((e) => {
-        let newProject = new Project(e._projectId, e._projectName);
+        // let newProject = new Project(e._projectId, e._projectName);
+        let newProject = new Project(e.projectId, e.projectName);
         projectList.push(newProject);
       });
     } else {
