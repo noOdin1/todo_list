@@ -114,3 +114,9 @@ fieldset {
   flex-direction: column;
 }
 
+.createProject.container,
+.createTask.container,
+.display.container {
+  margin-bottom: 0.5em;
+}
+
