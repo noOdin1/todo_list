@@ -126,3 +126,7 @@ fieldset {
   padding: var(--input-widgets-spacing);
 }
 
+div.taskPriority.listContainer {
+  margin-left: calc(var(--input-widgets-spacing) * 2);
+}
+
