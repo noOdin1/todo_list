@@ -262,3 +262,17 @@ button {
   background-color: transparent;
 }
 
+p.display.value.task.priority.para.urgent {
+  background-color: #ff0000;
+  color: white;
+}
+
+p.display.value.task.priority.para.important {
+  background-color: #ffd580;
+}
+
+p.display.value.task.priority.para.normal {
+  background-color: #7dff00;
+  /* color: white; */
+}
+
