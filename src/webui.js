@@ -347,6 +347,12 @@ const displayAllTasks = (taskProject) => {
   contentArea.appendChild(taskSection);
 };
 const showTasksForProject = (event) => {
+  clo(
+    "Showing tasks related to this project, event.target.id: " +
+      event.target.id,
+  );
+  let tmpProjectId = event.target.id.replace("showRelatedTasksBtn_", "");
+  let tmpProjectName = "";
 };
 
 function populateProjectForTask() {
