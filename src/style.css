@@ -276,3 +276,14 @@ p.display.value.task.priority.para.normal {
   /* color: white; */
 }
 
+button.completed.display.Complete {
+  background-color: #00ffff;
+  color: black;
+}
+
+button.completed.display.Incomplete {
+  /* background-color: #ff9d00; */
+  background-color: #f0dd00;
+  color: black;
+}
+
