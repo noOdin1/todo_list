@@ -56,6 +56,16 @@ const editTaskForm = (event, obj) => {
       tmpTask = elem;
     }
   });
+  let tmpNameInput = htmlElemId("taskName");
+  tmpNameInput.value = tmpTask.taskName;
+  tmpNameInput.disabled = true;
+  let optAssignedProject = htmlElemClass("optionAssigned");
+  Array.from(optAssignedProject).forEach((item) => {
+    if (tmpTask.projectId == item.value) {
+      item.setAttribute("selected", true);
+    }
+  });
+
 };
 
 
