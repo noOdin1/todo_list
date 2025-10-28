@@ -47,6 +47,32 @@ const htmlElemTag = (str) => {
   return document.getElementsByTagName(str);
 };
 
+
+
+
+function populateProjectForTask() {
+  let taskAssignmentDropDown = document.getElementById(
+    "projectIdForTaskDropDown",
+  );
+  removeAllChildElemById(taskAssignmentDropDown);
+
+  let nullOption = createOption(
+    ["unassigned", "task", "dropDown", "optionAssigned"],
+    "unassignedDropDown",
+    "Unassigned",
+    "Unassigned",
+    true,
+  );
+  taskAssignmentDropDown.add(nullOption);
+  projectList.forEach((elem) => {
+    let tmpOption = document.createElement("option");
+    tmpOption.classList.add("optionAssigned");
+    tmpOption.innerHTML = elem.projectName;
+    tmpOption.value = elem.projectId;
+    taskAssignmentDropDown.add(tmpOption);
+  });
+}
+
 function addProjectFormEventListener() {
   let formProject = document.getElementById("createNewProject");
   formProject.addEventListener("submit", (event) => {
