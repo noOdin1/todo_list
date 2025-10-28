@@ -376,6 +376,20 @@ const displayAllProjects = (displayType) => {
   );
   tmpH2.textContent = "Projects";
   let tmpProjectList = projectList.slice();
+  if (displayType != undefined) {
+    tmpProjectList = [];
+    tmpH2.textContent = "Unassigned Projects";
+    /* construct the temporary array */
+    let tmpTaskProjectId = [];
+    taskList.forEach((elem) => {
+      tmpTaskProjectId.push(elem.projectId);
+    });
+    projectList.forEach((elem) => {
+      if (!tmpTaskProjectId.includes(elem.projectId)) {
+        tmpProjectList.push(elem);
+      }
+    });
+  }
 };
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
