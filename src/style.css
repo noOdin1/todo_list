@@ -287,3 +287,9 @@ button.completed.display.Incomplete {
   color: black;
 }
 
+.display.value.task.card.para {
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  border: 1px solid rgba(36, 36, 36, 0.2);
+}
+
