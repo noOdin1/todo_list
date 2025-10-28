@@ -79,6 +79,7 @@ h3 {
   grid-area: left;
   grid-column: 1 / span 2;
   grid-row: 2 / span 11;
+  padding: 0.3em;
   border-bottom-left-radius: var(--container-border-radius);
   border: var(--css_visual_border_guide);
 }
@@ -98,6 +99,7 @@ h3 {
   color: white;
   /* font-size: clamp(1.8rem, calc(7vw + 1rem), 3rem); */
 }
+
 legend {
   margin-left: var(--input-widgets-spacing);
   padding: 0 0.2em;
