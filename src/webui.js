@@ -182,6 +182,12 @@ const displayAllTasks = (taskProject) => {
       });
     }
   }
+  taskSection.appendChild(tmpH2);
+  let taskCardSection = createDiv(
+    ["display", "task", "subSection", "div", "container"],
+    "taskSubSection",
+  );
+  taskSection.appendChild(taskCardSection);
 };
 
 function populateProjectForTask() {
