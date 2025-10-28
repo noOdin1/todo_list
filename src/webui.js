@@ -362,6 +362,19 @@ const showTasksForProject = (event) => {
 };
 
 const displayAllProjects = (displayType) => {
+  clo("Displaying all projects");
+  let contentArea = document.getElementById("displayArea");
+  removeAllChildElemById(contentArea);
+  let projectSection = createDiv(
+    ["display", "project", "section", "div", "container"],
+    "projectSection",
+  );
+  let tmpH2 = elementFactory(
+    "h2",
+    ["displayDiv", "project", "title"],
+    "projectSectionTitle",
+  );
+  tmpH2.textContent = "Projects";
 };
 function populateProjectForTask() {
   let taskAssignmentDropDown = document.getElementById(
