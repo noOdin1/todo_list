@@ -24,6 +24,12 @@ export class Project {}
 export class Task {}
 export const projectData = "project";
 export const taskData = "task";
+export function readTaskData() {
+  /*  */
+}
+export function readProjectData() {
+  /*  */
+}
 
 const todoApp = (function () {
   let runConsoleVersion = false;
