@@ -31,4 +31,6 @@ The items suggested and implemented in this project:
   15. Different colors for different priorities        [done]
   16. Different colors for completed and incomplete tasks
                                                        [done]
+  17. Save data to localStorage                        [done]
+  18. Read data from localStorage                      [done]
 </pre>
