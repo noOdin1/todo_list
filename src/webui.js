@@ -277,6 +277,8 @@ const displayAllTasks = (taskProject) => {
       "card",
       "para",
     ]);
+    clo("[displayAllTasks] ");
+    cdi(item);
     tmpParaPriorityVal.classList.add(item.taskPriority.toLowerCase());
     tmpParaPriorityVal.textContent = item.taskPriority;
 
