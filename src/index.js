@@ -343,8 +343,9 @@ const todoApp = (function () {
       const tmpProjectData = JSON.parse(storedProjectData);
       tmpProjectData.forEach((e) => {
         // let newProject = new Project(e._projectId, e._projectName);
-        let newProject = new Project(e.projectId, e.projectName);
+        let newProject = new Project(e._projectId, e._projectName);
         projectList.push(newProject);
+        console.dir(newProject);
       });
     } else {
       console.log("Project data not found in local storage.");
@@ -357,14 +358,15 @@ const todoApp = (function () {
     if (storedTaskData) {
       const tmpTaskData = JSON.parse(storedTaskData);
       tmpTaskData.forEach((e) => {
+        console.log("[readTaskData] e.taskId: " + e._taskId);
         let newTask = new Task(
-          e.taskId,
-          e.projectId,
-          e.taskName,
-          e.taskDesc,
-          e.taskPriority,
-          e.taskDueDate,
-          e.taskComplete,
+          e._taskId,
+          e._projectId,
+          e._taskName,
+          e._taskDesc,
+          e._taskPriority,
+          e._taskDueDate,
+          e._taskComplete,
         );
         taskList.push(newTask);
       });
