@@ -22,7 +22,8 @@ import {
   removeAllChildElemByClass,
   removeAllChildElemById,
 } from "./removeAllChildElem.js";
-import { projectData, taskData } from "./index.js";
+const projectData = "project";
+const taskData = "task";
 
 const clo = (str) => {
   console.log(str);
