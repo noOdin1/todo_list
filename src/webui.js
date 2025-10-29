@@ -693,6 +693,9 @@ const readTaskData = () => {
 };
 
 function addFormEventListener() {
+  readProjectData();
+  readTaskData();
+  cdi(projectList);
   populateProjectForTask();
 
   addProjectFormEventListener();
