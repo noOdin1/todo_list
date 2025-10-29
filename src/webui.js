@@ -623,6 +623,75 @@ const addEvtListDisplayDropDown = () => {
   });
 };
 
+const readProjectData = () => {
+  const storedProjectData = localStorage.getItem("project");
+
+  if (storedProjectData) {
+    const tmpProjectData = JSON.parse(storedProjectData);
+    tmpProjectData.forEach((e) => {
+      // let newProject = new Project(e.projectId, e._projectName);
+      // let newProject = new Project(e._projectId, e._projectName);
+      let newProject = new Project();
+      if (e._projectId != undefined) {
+        newProject.projectId = e._projectId;
+        newProject.projectName = e._projectName;
+      } else {
+        newProject.projectId = e.projectId;
+        newProject.projectName = e.projectName;
+      }
+      clo("[readProjectData]");
+      cdi(e);
+      cdi(newProject);
+      projectList.push(newProject);
+    });
+  } else {
+    console.log("Project data not found in local storage.");
+  }
+};
+
+const readTaskData = () => {
+  const storedTaskData = localStorage.getItem("task");
+
+  if (storedTaskData) {
+    const tmpTaskData = JSON.parse(storedTaskData);
+    // cdi(tmpTaskData);
+    tmpTaskData.forEach((e) => {
+      let newTask = new Task();
+      // let newTask = new Task(
+      //   e._taskId,
+      //   e._projectId,
+      //   e._taskName,
+      //   e._taskDesc,
+      //   e._taskPriority,
+      //   e._taskDueDate,
+      //   e._taskComplete,
+      // );
+      if (e._taskId != undefined) {
+        newTask.taskId = e._taskId;
+        newTask.projectId = e._projectId;
+        newTask.taskName = e._taskName;
+        newTask.taskDesc = e._taskDesc;
+        newTask.taskPriority = e._taskPriority;
+        newTask.taskDueDate = e._taskDueDate;
+        newTask.taskComplete = e._taskComplete;
+      } else {
+        newTask.taskId = e.taskId;
+        newTask.projectId = e.projectId;
+        newTask.taskName = e.taskName;
+        newTask.taskDesc = e.taskDesc;
+        newTask.taskPriority = e.taskPriority;
+        newTask.taskDueDate = e.taskDueDate;
+        newTask.taskComplete = e.taskComplete;
+      }
+      taskList.push(newTask);
+      clo("[readTaskData]");
+      cdi(e);
+    });
+  } else {
+    console.log("Task data not found in local storage.");
+  }
+};
+
 function addFormEventListener() {
   populateProjectForTask();
 
