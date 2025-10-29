@@ -33,3 +33,20 @@ The items suggested and implemented in this project:
   17. Save data to localStorage                            [done]
   18. Read data from localStorage                          [done]
 </pre>
+
+The following is a recap from TOP on how to deploy your application:<br />
+
+1. Make a new branch for your deployment, <br>
+   <pre>git branch todo_list_prod</pre>
+2. Make sure you have all your work committed, <br>
+   <pre>git status</pre>
+3. Run,<br />
+   <pre>git checkout todo_list_prod && git merge main --no-edit</pre>
+4. Now to transpile your work:<br>
+   <pre>npx webpack</pre>
+   or<br>
+   <pre>npm run build</pre>
+   because you have all the scripts to do the transpiling in package.json<br>
+5. <pre>git add dist -f && git commit -m "Deployment commit"</pre>
+6. <pre>>git subtree push --prefix dist origin todo_list_prod</pre>
+7. <pre>git checkout main</pre>
