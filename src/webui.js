@@ -316,6 +316,9 @@ const displayAllTasks = (taskProject) => {
     );
     tmpCompletedBtn.addEventListener("click", (event) => {
       item.taskComplete = item.taskComplete ? false : true;
+      // clo("[displayAllTasks] " + JSON.stringify(taskList));
+      localStorage.setItem(taskData, JSON.stringify(taskList));
+
       showInfoOnContentArea();
     });
     let tmpEditBtn = createButton(
